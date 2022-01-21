@@ -25,38 +25,42 @@ class NavigationDrawerWidget extends StatelessWidget {
                 children: [
                   const SizedBox(height: 12),
                   const SizedBox(height: 24),
-                  buildMenuItem(
-                    text: 'Turismo',
-                    icon: Icons.camera,
-                    onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => PageTurismo(),
-        )),
-                  ),
+                  // buildMenuItem(
+                  //   text: 'Turismo',
+                  //   icon: Icons.camera,
+                  //   onClicked: () =>
+                  //       Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => PageTurismo(),
+                  //   )),
+                  // ),
                   buildMenuItem(
                     text: 'Comunicados Importantes',
                     icon: Icons.new_releases,
-                    onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Comunicados(),
-        )),
+                    onClicked: () =>
+                        Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Comunicados(),
+                    )),
                   ),
-                  
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Bono de Sueldo',
                     icon: Icons.read_more,
-                    onClicked: () => openLink('https://infogov.com.ar/bonos/malargue/#/login?returnUrl=%2F'),
+                    onClicked: () => openLink(
+                        'https://infogov.com.ar/bonos/malargue/#/login?returnUrl=%2F'),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Tiempo',
                     icon: Icons.cloud,
-                    onClicked: () => openLink('https://www.meteored.com.ar/tiempo-en_Malargue-America+Sur-Argentina-Mendoza-SAMM-1-16758.html'),
+                    onClicked: () => openLink(
+                        'https://www.meteored.com.ar/tiempo-en_Malargue-America+Sur-Argentina-Mendoza-SAMM-1-16758.html'),
                   ),
                   const SizedBox(height: 24),
                   Divider(color: Colors.white70),
                   const SizedBox(height: 24),
                   buildMenuItem(
-                    text: 'V.1.1.0.2021  Esta aplicación es desarrollada por el Área de Investigación y desarrollo de software.',
+                    text:
+                        'V.1.1.0.2021  Esta aplicación es desarrollada por el Área de Investigación y desarrollo de software.',
                     icon: Icons.developer_mode,
                   ),
                 ],
@@ -69,16 +73,19 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   Widget buildHeader({
-     String urlImage,
-     String name,
-     String email,
-     VoidCallback onClicked,
+    String urlImage,
+    String name,
+    String email,
+    VoidCallback onClicked,
   }) =>
       InkWell(
         onTap: onClicked,
         child: Container(
           decoration: BoxDecoration(
-            image: new DecorationImage(image: NetworkImage('https://turismo.malargue.gov.ar/wp-content/uploads/2019/11/payuna-home.jpg'),fit: BoxFit.cover),
+            image: new DecorationImage(
+                image: NetworkImage(
+                    'https://turismo.malargue.gov.ar/wp-content/uploads/2019/11/payuna-home.jpg'),
+                fit: BoxFit.cover),
           ),
           padding: padding.add(EdgeInsets.symmetric(vertical: 120)),
           child: Row(
@@ -105,10 +112,9 @@ class NavigationDrawerWidget extends StatelessWidget {
         ),
       );
 
-
   Widget buildMenuItem({
-     String text,
-     IconData icon,
+    String text,
+    IconData icon,
     VoidCallback onClicked,
   }) {
     final color = Colors.white;
@@ -121,5 +127,4 @@ class NavigationDrawerWidget extends StatelessWidget {
       onTap: onClicked,
     );
   }
-
 }

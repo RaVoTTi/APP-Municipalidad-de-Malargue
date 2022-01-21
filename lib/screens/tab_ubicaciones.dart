@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:municipalidad_de_malargue/delegates/search_locations_delegate.dart';
 import 'package:municipalidad_de_malargue/screens/page_location.dart';
 import 'package:municipalidad_de_malargue/screens/page_location2.dart';
 
@@ -55,7 +56,7 @@ class TabUbicaciones extends StatelessWidget {
 
           child: IconButton(
             onPressed: (){
-              // showSearch(context: context, delegate: )
+              showSearch(context: context, delegate: LocationsSearchDelegate() );
             },
             icon: Icon(Icons.search, color:Colors.white,size: 35,),
           ),
@@ -79,7 +80,7 @@ class TabUbicaciones extends StatelessWidget {
                   minLeadingWidth: 50,
                   onTap: () =>                     Navigator.push(
                           context, MaterialPageRoute(
-                        builder: (context) => LocationPage(
+                        builder: (context) => LocationPage2(
                           description:json['description'],
                           number:json['number'],
                           schedule:json['schedule'],

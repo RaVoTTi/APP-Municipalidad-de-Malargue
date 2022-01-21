@@ -50,10 +50,10 @@ class TabInicio extends StatelessWidget {
             items: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => PageTurismo()),
-                    );
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => PageTurismo()),
+                  //   );
                 },
                 child: CardCarousel(
                   urlImage:
