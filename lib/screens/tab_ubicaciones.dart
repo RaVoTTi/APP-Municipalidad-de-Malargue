@@ -54,7 +54,9 @@ class TabUbicaciones extends StatelessWidget {
           padding: EdgeInsets.only(right: 10),
 
           child: IconButton(
-            onPressed: (){},
+            onPressed: (){
+              // showSearch(context: context, delegate: )
+            },
             icon: Icon(Icons.search, color:Colors.white,size: 35,),
           ),
         ),]),

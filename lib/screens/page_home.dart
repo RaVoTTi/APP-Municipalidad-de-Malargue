@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:municipalidad_de_malargue/screens/tab_scan.dart';
+
 import 'package:municipalidad_de_malargue/screens/tab_ubicaciones.dart';
 // import 'package:municipalidad_de_malargue/helpers/func_open_link.dart';
 
