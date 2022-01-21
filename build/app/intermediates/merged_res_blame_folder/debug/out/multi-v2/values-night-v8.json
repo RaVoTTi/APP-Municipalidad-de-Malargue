@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/rivo/Programming/Flutter/AplicacionMunicipalidadMalargue-main/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "/home/rivo/Programming/Flutter/AplicacionMunicipalidadMalargue-main/android/app/src/main/res/values-night/color.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "41",
+                        "endOffsets": "94"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    }
+                },
+                {
+                    "source": "/home/rivo/Programming/Flutter/AplicacionMunicipalidadMalargue-main/android/app/src/main/res/values-night/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "175,829",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "471,995"
+                    },
+                    "to": {
+                        "startLines": "3,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "97,394",
+                        "endLines": "7,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "389,558"
+                    }
+                }
+            ]
+        }
+    ]
+}

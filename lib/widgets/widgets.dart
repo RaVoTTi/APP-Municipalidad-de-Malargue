@@ -13,7 +13,7 @@ import 'package:municipalidad_de_malargue/screens/page_turismo.dart';
 import 'package:permission_handler/permission_handler.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
-import 'package:qrscan/qrscan.dart' as scanner;
+// import 'package:qrscan/qrscan.dart' as scanner;
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -27,6 +27,6 @@ part 'icon_generic.dart';
 part 'card_carousel.dart';
 part 'img_telefonos.dart';
 
-part 'btn_scan.dart';
+// part 'btn_scan.dart';
 part 'text_style.dart';
 part 'img_appbar.dart';

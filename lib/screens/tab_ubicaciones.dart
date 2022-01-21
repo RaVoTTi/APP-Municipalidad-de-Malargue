@@ -44,34 +44,51 @@ class TabUbicaciones extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: products.length,
-        itemBuilder: (BuildContext context, int index) {
-          final json = products[index];
-          // print(json['title']);
-          return ListTile(
-              isThreeLine: true,
-              title: Text(
-                json['title'],
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              subtitle: Text(
-                "Horarios de Atención: " + json['schedule'],
-                style: TextStyle(color: Colors.grey, fontSize: 12),
-              ),
-              minLeadingWidth: 50,
-              onTap: () =>                     Navigator.push(
-                      context, MaterialPageRoute(
-                    builder: (context) => LocationPage2(
-                      description:json['description'],
-                      number:json['number'],
-                      schedule:json['schedule'],
-                      title:json['title'],
-                      urlImage:json['urlImage'],
-                      urlLocation:json['urlLocation'],
-                    ),
-                  )));
-          // openLink(json['urlLocation']));
-        });
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff00939d),
+        shape: StadiumBorder(),
+
+        actions:<Widget> 
+        [Container(
+          padding: EdgeInsets.only(right: 10),
+
+          child: IconButton(
+            onPressed: (){},
+            icon: Icon(Icons.search, color:Colors.white,size: 35,),
+          ),
+        ),]),
+        
+        body: ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (BuildContext context, int index) {
+              final json = products[index];
+              // print(json['title']);
+              return ListTile(
+                  isThreeLine: true,
+                  title: Text(
+                    json['title'],
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text(
+                    "Horarios de Atención: " + json['schedule'],
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
+                  minLeadingWidth: 50,
+                  onTap: () =>                     Navigator.push(
+                          context, MaterialPageRoute(
+                        builder: (context) => LocationPage(
+                          description:json['description'],
+                          number:json['number'],
+                          schedule:json['schedule'],
+                          title:json['title'],
+                          urlImage:json['urlImage'],
+                          urlLocation:json['urlLocation'],
+                        ),
+                      )));
+              // openLink(json['urlLocation']));
+            }),
+      
+    );
   }
 }
