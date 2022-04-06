@@ -12,12 +12,12 @@ class TabUbicaciones extends StatelessWidget {
   TabUbicaciones({this.height});
   final List<Map<String, String>> products = [
     {
+      'title': 'Municipalidad de Malargüe',
+      'description': 'description',
+      'schedule': '08:00hs a 13:00hs',
+      'number': 'tel:02604471060',
       'urlImage':
           'https://www.malargue.gov.ar/wp-content/uploads/2020/04/malargue-municipalidad-1.jpg',
-      'title': 'Municipalidad de Malargüe',
-      'schedule': '08:00hs a 13:00hs',
-      'description': 'description',
-      'number': 'tel:02604471060',
       'urlLocation':
           "https://www.google.com/maps/place/Municipality+of+Malarg%C3%BCe/@-35.4699356,-69.5828001,17z/data=!4m5!3m4!1s0x0:0xdba40975c2c3cf61!8m2!3d-35.4691534!4d-69.5842417"
     },
