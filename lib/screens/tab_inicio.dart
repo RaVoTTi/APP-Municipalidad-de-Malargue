@@ -15,9 +15,8 @@ Map<String, String> _urls = {
   'terminal': 'https://terminal.malargue.gov.ar/',
   'Infogov': 'https://infogov.com.ar/bonos/malargue/#/login?returnUrl=%2F',
   'HCD': 'https://hcd.malargue.gov.ar/',
-  'chatBot': 'http://chatbot.munimalargue.online/',
+  'chatBot': 'http://municipalidaddemalargue.xyz/chabot/',
   'rentas': 'https://infogov.com.ar/rentas/malargue/',
-  'turismo': 'https://infogov.com.ar/rentas/malargue/',
 
 };
 
@@ -33,7 +32,7 @@ class TabInicio extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: ListView(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.
         children: <Widget>[
           // Slider Principal//
           CarouselSlider(
@@ -57,7 +56,9 @@ class TabInicio extends StatelessWidget {
                 },
                 child: CardCarousel(
                   urlImage:
-                      'https://www.malargue.gov.ar/wp-content/uploads/2021/04/turismo.jpg', function: null,
+                      'https://www.malargue.gov.ar/wp-content/uploads/2021/04/turismo.jpg',
+                  function: () => openLink(_urls['turismo']),
+
                 ),
               ),
               CardCarousel(
@@ -150,41 +151,37 @@ class TabInicio extends StatelessWidget {
             // ),
             //Slider 2//
 
-CarouselSlider(
-                options: CarouselOptions(
-                  height: height * 0.4,
-                  aspectRatio: 16 / 9,
-                  viewportFraction: 0.9,
-                  enableInfiniteScroll: true,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                ),
-                items: [
-                CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-03.png', function: null, cover: true,),
-                CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-02a.png', function: null, cover: true),
-                CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-03.png', function: null,  cover: true),
-                ],
-              ),
+// CarouselSlider(
+//                 options: CarouselOptions(
+//                   height: height * 0.4,
+//                   aspectRatio: 16 / 9,
+//                   viewportFraction: 0.9,
+//                   enableInfiniteScroll: true,
+//                   autoPlay: true,
+//                   autoPlayInterval: Duration(seconds: 3),
+//                   autoPlayAnimationDuration: Duration(milliseconds: 800),
+//                   autoPlayCurve: Curves.fastOutSlowIn,
+//                 ),
+//                 items: [
+//                 CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-03.png', function: null, cover: true,),
+//                 CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-02a.png', function: null, cover: true),
+//                 CardCarousel(urlImage: 'https://www.malargue.gov.ar/wp-content/uploads/2020/03/imagenes_cuidados-03.png', function: null,  cover: true),
+//                 ],
+//               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  IconGeneric(
-                    icon: 'peopleArrows',
-                    size: iconSize,
+                  BtnRedes(
+                    name: 'Radio 94.5 FM Municipal',
                   ),
-                  IconGeneric(
-                    icon: 'handsWash',
-                    size: iconSize,
+                  BtnRedes(
+                    name: 'Cine',
                   ),
-                  IconGeneric(
-                    icon: 'headSideMask',
-                    size: iconSize,
+                  BtnRedes(
+                    name: 'Chat Bot',
                   ),
-                  IconGeneric(
-                    icon: 'handshakeSlash',
-                    size: iconSize,
+                  BtnRedes(
+                    name: 'Terminal',
                   ),
                 ],
               ),

@@ -74,12 +74,12 @@ class _TelefonoState extends State<TabTelefono> {
       'description': '08:00hs a 13:00hs',
       'number': 'tel:02604632611'
     },
-    {
-      'url': 'https://www.mendoza.travel/wp-content/mendoza_uploads/museo3.jpg',
-      'title': 'Cultura',
-      'description': '08:00hs a 13:00hs',
-      'number': 'tel:02604470154'
-    },
+    // {
+    //   'url': 'https://www.mendoza.travel/wp-content/mendoza_uploads/museo3.jpg',
+    //   'title': 'Cultura',
+    //   'description': '08:00hs a 13:00hs',
+    //   'number': 'tel:02604470154'
+    // },
     {
       'url':
           'https://www.malargue.gov.ar/wp-content/uploads/2021/01/2bcd7b39-11e0-44ca-b0d2-71fdac280577-1.jpg',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:municipalidad_de_malargue/screens/tab_ubicaciones.dart';
+// import 'package:municipalidad_de_malargue/screens/tab_ubicaciones.dart';
 // import 'package:municipalidad_de_malargue/helpers/func_open_link.dart';
 
 import 'package:municipalidad_de_malargue/widgets/widgets.dart';
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final iconSize = height * 0.035;
     return DefaultTabController(
-      length: 3,
+      length: 2,
       initialIndex: 1,
       child: SafeArea(
         child: Scaffold(
@@ -99,17 +99,17 @@ class HomePage extends StatelessWidget {
                         //     iconMargin: EdgeInsets.all(2),
                         //   ),
                         // ),
-                        Container(
-                          height: height * 0.07,
-                          child: Tab(
-                            icon: Icon(
-                              Icons.directions_bus,
-                              size: iconSize,
-                            ),
-                            text: "Ubicaciones",
-                            iconMargin: EdgeInsets.all(2),
-                          ),
-                        )
+                        // Container(
+                        //   height: height * 0.07,
+                        //   child: Tab(
+                        //     icon: Icon(
+                        //       Icons.directions_bus,
+                        //       size: iconSize,
+                        //     ),
+                        //     text: "Ubicaciones",
+                        //     iconMargin: EdgeInsets.all(2),
+                        //   ),
+                        // )
                       ],
                     )),
               ),
@@ -124,7 +124,7 @@ class HomePage extends StatelessWidget {
               ),
               TabInicio(height: height, width: width),
               // TabScan(height: height),
-              TabUbicaciones(height: height)
+              // TabUbicaciones(height: height)
             ],
           ),
         ),

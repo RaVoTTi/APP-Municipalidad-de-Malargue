@@ -28,7 +28,19 @@ class BtnRedes extends StatelessWidget {
     },
     'Radio 94.5 FM Municipal': {
       'icon': FontAwesomeIcons.microphone,
-      'url': 'https://fmmunicipal.radioostream.com/',
+      'url': 'https://serviciostreaming.com/radio/11/playerfull.php?p=7045&r=RadioMunicipalEnvivo',
+    },
+    'Cine': {
+      'icon': FontAwesomeIcons.film,
+      'url': 'https://serviciostreaming.com/radio/11/playerfull.php?p=7045&r=RadioMunicipalEnvivo',
+    },
+    'Chat Bot': {
+      'icon': FontAwesomeIcons.robot,
+      'url': 'https://serviciostreaming.com/radio/11/playerfull.php?p=7045&r=RadioMunicipalEnvivo',
+    },
+    'Terminal': {
+      'icon': FontAwesomeIcons.bus,
+      'url': 'https://serviciostreaming.com/radio/11/playerfull.php?p=7045&r=RadioMunicipalEnvivo',
     },
   };
 

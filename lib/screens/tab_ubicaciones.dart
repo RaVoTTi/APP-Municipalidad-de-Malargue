@@ -1,15 +1,24 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:municipalidad_de_malargue/delegates/search_locations_delegate.dart';
+import 'package:municipalidad_de_malargue/interfaces/interface_location.dart';
+// import 'package:municipalidad_de_malargue/delegates/search_locations_delegate.dart';
+// import 'package:municipalidad_de_malargue/interfaces/interface_location.dart';
 import 'package:municipalidad_de_malargue/screens/page_location.dart';
 import 'package:municipalidad_de_malargue/screens/page_location2.dart';
 
 // import 'package:municipalidad_de_malargue/widgets/widgets.dart';
 
-class TabUbicaciones extends StatelessWidget {
+class TabUbicaciones extends StatefulWidget {
   final double height;
 
   TabUbicaciones({this.height});
+
+  @override
+  State<TabUbicaciones> createState() => _TabUbicacionesState();
+}
+
+class _TabUbicacionesState extends State<TabUbicaciones> {
   final List<Map<String, String>> products = [
     {
       'title': 'Municipalidad de Malargüe',
@@ -43,55 +52,76 @@ class TabUbicaciones extends StatelessWidget {
     }
   ];
 
+ 
+
+  @override
+  void initState() {
+    super.initState();
+    getLocations();
+
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff00939d),
-        shape: StadiumBorder(),
+          backgroundColor: Color(0xff00939d),
+          shape: StadiumBorder(),
+          actions: <Widget>[
+            Container(
+              padding: EdgeInsets.only(right: 10),
 
-        actions:<Widget> 
-        [Container(
-          padding: EdgeInsets.only(right: 10),
+              // child: IconButton(
+              //   onPressed: (){
+              //     showSearch(context: context, delegate: LocationsSearchDelegate() );
+              //   },
+              //   icon: Icon(Icons.search, color:Colors.white,size: 35,),
+              // ),
+            ),
+          ]),
+      body: FutureBuilder(
+          future: getLocations(),
+          builder:
+              (BuildContext context, AsyncSnapshot<List> snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data.length,
+                  itemBuilder: (context, index) {
+                    var location = snapshot.data[0];
+                    print(location);
+                    return ListTile(
+                      isThreeLine: true,
+                      title: Text(
+                        location.title,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Text(
+                        "Horarios de Atención: " + location.schedule,
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                      minLeadingWidth: 50,
+                    );
+                  });
+            } else {
+              print('No');
+              return Text('NOOOOO');
+            }
+            // print(json['title']);
 
-          child: IconButton(
-            onPressed: (){
-              showSearch(context: context, delegate: LocationsSearchDelegate() );
-            },
-            icon: Icon(Icons.search, color:Colors.white,size: 35,),
-          ),
-        ),]),
-        
-        body: ListView.builder(
-            itemCount: products.length,
-            itemBuilder: (BuildContext context, int index) {
-              final json = products[index];
-              // print(json['title']);
-              return ListTile(
-                  isThreeLine: true,
-                  title: Text(
-                    json['title'],
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text(
-                    "Horarios de Atención: " + json['schedule'],
-                    style: TextStyle(color: Colors.grey, fontSize: 12),
-                  ),
-                  minLeadingWidth: 50,
-                  onTap: () =>                     Navigator.push(
-                          context, MaterialPageRoute(
-                        builder: (context) => LocationPage2(
-                          description:json['description'],
-                          number:json['number'],
-                          schedule:json['schedule'],
-                          title:json['title'],
-                          urlImage:json['urlImage'],
-                          urlLocation:json['urlLocation'],
-                        ),
-                      )));
-              // openLink(json['urlLocation']));
-            }),
-      
+            //     onTap: () =>                     Navigator.push(
+            //             context, MaterialPageRoute(
+            //           builder: (context) => LocationPage2(
+            //             description:json['description'],
+            //             number:json['number'],
+            //             schedule:json['schedule'],
+            //             title:json['title'],
+            //             urlImage:json['urlImage'],
+            //             urlLocation:json['urlLocation'],
+            //           ),
+            //         )));
+            // openLink(json['urlLocation']));
+          }),
     );
   }
 }
